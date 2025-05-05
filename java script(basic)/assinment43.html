@@ -1,0 +1,24 @@
+<!-- ) WAP to convert binary number into decimal number -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let binary = 1001;
+           let decimal = 0;
+           base = 1;
+           while(binary != 0){
+               let lastdigit = binary %10;
+               decimal = decimal + lastdigit * base;
+               base = base * 2;
+               binary = parseInt(binary/10);
+           }
+           document.write(decimal);
+        </script>
+    </body>
+</html>
+<!-- 0 + -->

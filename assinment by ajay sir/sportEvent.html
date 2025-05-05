@@ -1,0 +1,32 @@
+<!-- 
+ A local sports event is being held where three participants compete in a round. At the end of the round, their scores are recorded, and the organizer needs to identify which participant scored the highest. The organizer will input the scores of the three participants, and your task is to write a program that outputs the highest score.
+Input format :
+The program should take three integers as input, representing the scores of the three participants.
+Output format :
+The program should then determine the largest score and print it.
+Code constraints :
+n1,n2,n3(Integers)
+Sample test cases :
+Input 1 :
+6 7 8
+Output 1 :
+8
+Input 2 :
+67 67 67
+Output 2 :
+67
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+       <script>
+         let num1 = parseInt(prompt("enter the first number"));
+         let num2 = parseInt(prompt("enter the second number"));
+         let num3 = parseInt(prompt("enter the thirth number"));
+         let result = Math.max(num1,num2,num3);
+         document.write(result);
+       </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!-- 
+ 7. Check Leap Year
+Write a Java program that takes a year from the user and prints whether it is a leap year or not.
+Test Data
+Input the year: 2016
+Expected Output :
+2016 is a leap year -->
+<html>
+    <heade>
+        <title>js assinment</title>
+    </heade>
+    <body>
+        <script>
+            let year = parseInt(prompt("enter the year"));
+            let leapPyear = (year % 4 == 0)? "leap year":
+            (year % 100 == 0&& year % 400 == 0) ? "leap year" : "not leap yaer";
+            document.write(leapPyear);
+     </script>
+    </body>
+</html>

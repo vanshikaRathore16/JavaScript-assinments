@@ -1,0 +1,20 @@
+<!-- WAP to find out all the leap years between two entered years -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num1 = parseInt(prompt("enter the first num"));
+           let num2 = parseInt(prompt("enter the second number"));
+           for(let i = num1;i <= num2;i++){
+           if((i % 4 == 0 && i % 100 != 0) || i % 400 == 0){
+              document.write(i + "<br>");
+           }
+           }
+        </script>
+    </body>
+</html>

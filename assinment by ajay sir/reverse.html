@@ -1,0 +1,23 @@
+<!-- 
+ Write a program to reverse a given integer using all loops.
+
+Input: 1234
+Output: 4321
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let num  = parseInt(prompt("enter the number"));
+            let result = 0;
+            while(num > 0){
+                let div = num % 10;
+                 result = result*10+div;
+                num = parseInt(num / 10);
+            }
+            document.write(result);
+        </script>
+    </body>
+</html>

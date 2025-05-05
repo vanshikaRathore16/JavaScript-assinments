@@ -1,0 +1,25 @@
+<!-- ) WAP to print alphabets in uppercase -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+          let s = "abcd";
+          let result = "";
+          for(let i = 0;i < s.length;i++){
+             let char = s[i];
+             if(char >= "a" && char <= "z"){
+                let uc = String.fromCharCode(char.charCodeAt(0)-32);
+                result += uc;
+             }else{
+                result += char;
+             }
+          }
+          document.write(result);
+        </script>
+    </body>
+</html>

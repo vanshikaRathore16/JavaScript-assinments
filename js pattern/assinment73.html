@@ -1,0 +1,30 @@
+<!-- 
+ A B C D E
+  A B C D
+   A B C
+    A B
+     A
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+         for(let i = 5;i >= 1;i--){
+            for(let k = 1;k <= 5-i;k++){
+                document.write("&nbsp");
+            }
+            for(let j = 1;j <= i;j++){
+                document.write(String.fromCharCode(64+j) + "&nbsp");
+            }
+            document.write("<br>");
+         }
+        </script>
+    </body>
+</html>
+<!-- ***** --> 

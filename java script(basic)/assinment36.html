@@ -1,0 +1,29 @@
+<!--  WAP to reverse a number -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+          let num = 1234;
+          let result = 0;
+          let num1 = num;
+        //   let temp = 0;
+          while(num1 != 0){
+           let temp = num1 % 10;
+            result = result*10 + temp;
+            num1 =parseInt( num1/10);
+          }
+          document.write(result);
+         
+        
+        </script>
+    </body>
+</html>
+<!-- 0*10+4 = 4 -->
+ <!-- 4*10+3 =  43-->
+  <!-- 43*10+2 = 432 -->
+   <!-- 432*10+1 = 4321 -->

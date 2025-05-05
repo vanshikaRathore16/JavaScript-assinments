@@ -1,0 +1,22 @@
+<!-- ) WAP to find out the sum of all the digits of a number -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num = 234;
+           let temp = num;
+           let sum = 0;
+           while(temp != 0){
+            let digit = temp % 10;
+            sum += digit;
+            temp = parseInt(temp/10);
+           }
+           document.write(sum);
+        </script>
+    </body>
+</html>

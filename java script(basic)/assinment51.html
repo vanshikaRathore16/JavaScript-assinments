@@ -1,0 +1,26 @@
+<!-- WAP to reverse all the numbers between two entered numbers -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num1 = parseInt(prompt("enter the fiest num"));
+           let num2 = parseInt(prompt("enter the second number"));
+           for(let i = num1;i <= num2;i ++){
+            let temp = i;
+            let result = 0;
+           while(temp != 0){
+            let digit = temp % 10;
+            result = result * 10 + digit;
+            temp = parseInt(temp/10);
+           }
+           let resultstring = result.toString();
+           document.write( resultstring + "<br>");
+           }
+        </script>
+    </body>
+</html>

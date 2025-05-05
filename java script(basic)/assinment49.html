@@ -1,0 +1,31 @@
+<!--  WAP to find out all the perfect numbers between two entered numbers -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num1 = parseInt(prompt("enter the fisrt number"));
+           let  num2 = parseInt(prompt("enter the second number"));
+            document.write("perfect numbers <br>");
+
+           for(let i = num1;i <= num2;i ++){
+            // document.write("perfect numbers");
+            let temp = i;
+                let sum = 0;
+            for(let j = 1; j < i;j++){
+                
+               if(i % j == 0){
+                 sum += j;
+               }
+            }
+            if(sum == temp){
+                document.write(i + "  is a perfect number <br>");
+            }
+           }
+        </script>
+    </body>
+</html>

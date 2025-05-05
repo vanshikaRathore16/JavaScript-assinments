@@ -1,0 +1,24 @@
+<!--   
+   WAP to print Square, Cube and Square Root of all numbers from 1 to N 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num1 = parseInt(prompt("enter the first num"));
+           let num2 = parseInt(prompt("enter the seconf number"));
+           for(let i = num1;i <= num2;i++){
+            let Square = i*i;
+            let cube = i*i*i;
+            let rootSquare = Math.Sqrt(i).toFixed(2);
+            document.write("number " + i + "square = " + Square + "cube = " + cube + "root square = " + rootSquare + "<br>");
+           }
+          
+        </script>
+    </body>
+</html>

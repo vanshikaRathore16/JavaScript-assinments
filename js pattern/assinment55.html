@@ -1,0 +1,31 @@
+<!-- 
+ABCDE
+ ABCD
+  ABC
+   AB
+    A 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+            let count = 0;
+          for(let i = 5;i >= 1;i++){
+            for(let k = 1; k <= count;k++){
+                document.write(" ");
+            }
+            count++;
+            for(let j = 1;j <= i;j++){
+                document.write(String.fromCharCode(64+j));
+            }
+            document.write("<br>");
+          }
+        </script>
+    </body>
+</html>
+<!-- ***** -->  

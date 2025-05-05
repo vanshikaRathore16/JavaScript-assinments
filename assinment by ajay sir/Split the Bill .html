@@ -1,0 +1,33 @@
+<!-- 
+ Split the Bill 
+You and your friends went out to eat. The bill was quite high!
+You want to split it evenly among yourselves.
+
+Task:
+Write a program that takes:
+
+The total bill amount
+
+The number of friends
+
+and prints how much each one should pay.
+ Example:
+Total bill = 1250  
+Friends = 5  
+Each should pay = 250.0
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS assinment</title>
+    </head>
+    <body>
+        <script>
+          let totalAmout = parseInt(prompt("enter the total amount"));
+          let friends = parseInt(prompt("enter the total friends number"));
+          let split = totalAmout / friends;
+          document.write("each should pay = " + split);
+        </script>
+    </body>
+</html>

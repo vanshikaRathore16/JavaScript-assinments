@@ -1,0 +1,22 @@
+<!-- WAP to find out HCF of a number -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num1 = 30;
+           let num2 = 40;
+           let result = 1;
+           for(let i = 1;i <= num1;i++){
+             if(num1 % i ==0 && num2 % i == 0){
+                result = i;
+             }
+           }
+           document.write(result);
+        </script>
+    </body>
+</html>

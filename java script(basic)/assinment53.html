@@ -1,0 +1,33 @@
+<!--  WAP to print all the strong numbers between two entered numbers -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num1 = parseInt(prompt("enter the first number"));
+           let num2 = parseInt(prompt("enter the second number"));
+           for(let i = num1;i <= num2;i++){
+            let temp = i;
+            let sum = 0;
+           
+            while(temp != 0){
+                let fact = 1;
+                let digit = temp % 10;
+                for(let j = 1;j <= digit;j++){
+                    fact *= j;
+                }
+                sum += fact;
+                temp = parseInt(temp/10);
+            }
+            if(sum == i){
+                document.write(i + "<br>");
+            }
+
+           }
+        </script>
+    </body>
+</html>

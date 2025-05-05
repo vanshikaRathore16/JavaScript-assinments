@@ -1,0 +1,25 @@
+<!-- WAP to print alphabets in lowercase -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let string1 = "VANshika";
+           let result = "";
+           for(let i = 0;i < string1.length;i++){
+            let char = string1[i];
+            if(char >= "A" && char <= "Z"){
+               let lc = String.fromCharCode(char.charCodeAt(0)+32);
+               result += lc;
+            }else{
+                result += char;
+            }
+           }
+           document.write(result);
+        </script>
+    </body>
+</html>

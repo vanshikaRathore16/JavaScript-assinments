@@ -1,0 +1,26 @@
+<!-- WAP to count no. Of even and odd digits in a number -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num = 2233;
+           let evencout = 0;
+           let oddcount = 0;
+           while(num != 0){
+            let digit = num%10;
+            if(digit % 2 == 0){
+                evencout++;
+            }else{
+               oddcount++; 
+            }
+            num = parseInt(num/10); 
+           }
+           document.write("evencount   " + evencout +"<br>"+ "odd count  " + oddcount);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 
+ "CineMax Ticket Counter"
+You are developing a billing system for CineMax Multiplex. The cinema charges different ticket prices based on the age
+ of the customer:
+Children (0 - 12 years): ₹100
+Adults (13 - 59 years): ₹150
+Senior Citizens (60 and above): ₹120
+The ticket clerk enters the customer’s age, and your program should display the ticket price based on the age.
+Accept the age of a customer
+Determine the ticket price using if-else statements
+Display a friendly message with the appropriate ticket price
+-->
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+           let age = parseInt(prompt("enter the age"));
+           let result = (age >= 0 && age <= 12) ? 100:
+           (age >= 13 && age <= 57) ? 150:
+           (age >= 60) ? 120: "enter valid age";
+           document.write(result);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!-- ) WAP to find out all the Armstrong numbers between two entered numbers -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num1 = parseInt(prompt("enter the first number"));
+           let num2 = parseInt(prompt("enter the second number"));
+          
+           for(let i = num1; i <= num2;i++){
+            let temp = i;
+            let cube = 0;
+            while(temp != 0){
+                let digit = temp % 10;
+                cube += digit*digit*digit;
+                temp = parseInt(temp/10);
+            }
+            if(cube == i){
+                document.write(i + "<br>");
+            }
+           }
+        </script>
+    </body>
+</html>

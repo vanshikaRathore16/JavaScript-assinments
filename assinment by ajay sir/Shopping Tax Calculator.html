@@ -1,0 +1,33 @@
+<!-- 
+ 5. Shopping Tax Calculator
+Your shopping cart total doesn’t include tax. A 12% GST is applied.
+Task:
+Input the cart total, calculate 12% tax, and show the final bill.
+Example:
+Cart = ₹2000  
+Tax = ₹240  
+Total = ₹2240
+
+6.Smart Coin Machine
+You insert ₹ amount into a vending machine.
+It gives back coins using the largest denominations possible (₹10 and ₹5).
+Task:
+Input the amount. Show how many ₹10 and ₹5 coins will be dispensed.
+
+Example:
+Amount = ₹35  
+Output = ₹10 x 3, ₹5 x 1
+-->
+<html>
+    <head>
+        <title>js assinment</title>
+    </head>
+    <body>
+        <script>
+            let total = parseInt(prompt("enter the total"));
+            let tax = parseInt((total * 12)/100);
+            let final = parseInt(tax+total);
+            document.write("total = " + final +"    "+ typeof  final);
+        </script>
+    </body>
+</html>

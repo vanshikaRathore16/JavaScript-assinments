@@ -1,0 +1,26 @@
+<!-- 
+"Amusement Park Entry Fee"
+You are managing entry at a theme park. The entry fee depends on a visitor's age:
+Below 5 years: Free
+5 to 17 years: ₹50
+18 to 60 years: ₹120
+Above 60: ₹80
+Write a Java program that takes a person’s age and prints the entry fee. Include validation for invalid ages. 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+             let age = parseInt(prompt("enter the age"));
+             let result = (age > 0 && age <= 5) ? "free":
+             (age >= 5 && age <= 17) ? "50":
+             (age >= 18 && age <= 60) ? "120":
+             (age >= 60) ? 80 :"invalid number";
+             document.write(result);
+
+        </script>
+       
+    </body>
+</html>

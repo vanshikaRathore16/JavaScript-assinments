@@ -1,0 +1,23 @@
+<!-- WAP to print factorial of all the numbers between two entered numbers -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num1 = parseInt(prompt("enter the first num"));
+           let num2 = parseInt(prompt("enter the second num"));
+           for(let i = num1;i <= num2;i++){
+              let num = i;
+              let fact = 1;
+              for(let k = 1;k <= num;k++){
+                fact *= k;
+              }
+              document.write("fact" + num + " = " + fact + "<br>");
+           }
+        </script>
+    </body>
+</html>

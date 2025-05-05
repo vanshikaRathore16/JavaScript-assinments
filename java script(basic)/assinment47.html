@@ -1,0 +1,21 @@
+<!--  WAP to print tables of all the numbers between two entered numbers -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num = parseInt(prompt("enter the fisrt number"));
+           let num2 = parseInt(prompt("enter the second number"));
+           for(let i = num;i <= num2;i++){
+               document.write("table of = " + i + "<br>");
+               for(let j = 1;j <= 10;j++){
+                  document.write(i * j + "<br>")
+               }
+           }
+        </script>
+    </body>
+</html>

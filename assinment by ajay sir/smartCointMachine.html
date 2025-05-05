@@ -1,0 +1,27 @@
+<!-- 
+Smart Coin Machine
+You insert ₹ amount into a vending machine.
+It gives back coins using the largest denominations possible (₹10 and ₹5).
+Task:
+Input the amount. Show how many ₹10 and ₹5 coins will be dispensed.
+
+Example:
+Amount = ₹35  
+Output = ₹10 x 3, ₹5 x 1 
+-->
+<html>
+    <head>
+        <title>js assinment</title>
+    </head>
+    <body>
+        <script>
+            let amount = parseInt(prompt("enter the anount"));
+            let ten = 0;
+            let five = 0;
+            ten = Math.floor(amount / 10);
+            let r = Math.floor( amount  % 10);
+            five = Math.floor( r / 5);
+            document.write("ten = " + ten + " five = " + five);
+        </script>
+    </body>
+</html>

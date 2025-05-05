@@ -1,0 +1,35 @@
+<!-- 
+ A
+AB
+A C
+A D
+ABCDE
+ -->
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <title>
+         
+         </title>
+     </head>
+     <body>
+         <script>
+           let row = 5;
+           for(let i = 1;i<=row;i++){
+            let num = 0;
+            for(let k = 1;k<=i;k++){
+                
+                if(k === 1||k === i||i=== row){
+                    document.write(String.fromCharCode(65+num));
+                   
+                }else{
+                    document.write(" ");
+                }
+                num++;
+            }
+            document.write("<br>");
+           }
+         </script>
+     </body>
+ </html>
+ <!-- ***** -->

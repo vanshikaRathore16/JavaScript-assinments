@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS assinment</title>
+    </head>
+    <body>
+        <script>
+            let input1 = prompt("enter second");
+             let input = parseInt(input1);
+            let hours = Math.floor(input / 3600);
+            let RS = input % 3600;
+            let minuts = Math.floor(RS / 60);
+            let RM = RS % 60;
+            console.log( "hourse = " + hours + "   minuts = " + minuts + "   second =" + RM);
+        </script>
+    </body>
+</html>
+<!-- 
+Note: do not use if else..
+Assignment 1: Time Converter 
+An event management company is developing a scheduling system. One of the key tasks is converting the duration of events from total seconds (which their sensor system records) into a more human-readable format of hours, minutes, and seconds.
+
+You are hired as a Java developer to create a tool that helps event coordinators quickly understand how long an event lasted.
+Write a Java program that:
+
+Accepts the total event duration in seconds as input.
+
+Calculates how many hours, minutes, and seconds it corresponds to.
+
+Displays the output in the format:
+
+Hours: x, Minutes: y, Seconds: z
+Sample Input:
+Total event duration in seconds: 3672
+Sample Output:
+Hours: 1, Minutes: 1, Seconds: 12
+-->

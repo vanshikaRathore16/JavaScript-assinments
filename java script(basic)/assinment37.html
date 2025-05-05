@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num = 13132;
+           let temp = num;
+           let result = 0;
+          while(temp != 0){
+            let digit = temp % 10;
+            result = result * 10 + digit; 
+             temp = parseInt(temp/10);
+          }
+          if(result == num){
+            document.write("palindroe num");
+          }else{
+            document.write("not palindrome");
+          }
+
+           
+        </script>
+    </body>
+</html>
+<!-- WAP to check whether entered number is palindrome or not -->

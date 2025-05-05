@@ -1,0 +1,31 @@
+<!-- WAP to check whether entered number is strong or not -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+           let num = 145;
+           
+           let temp = num;
+           let sum = 0;
+           while(temp != 0){
+             let digit = temp % 10;
+             let fact = 1;
+             for(let i = 1;i <= digit;i++){
+                fact = fact * i;
+             }
+             sum += fact;
+             temp = parseInt(temp/10);
+           }
+           if(sum == num){
+            document.write("strong");
+           }else{
+            document.write("not strong");
+           }
+        </script>
+    </body>
+</html>

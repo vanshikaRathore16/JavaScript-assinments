@@ -1,0 +1,48 @@
+<!-- 
+LifeTime Calculator 
+You are developing a feature for a health and wellness mobile app that helps users understand how long they've been alive in a more tangible way. Instead of just showing their age in years, the app wants to show how many days, hours, and minutes they've lived to help users reflect on how precious time is.
+
+You’ve been assigned to write the backend logic that performs this conversion.
+
+Accepts the user’s age in years as input.
+
+Calculates the approximate number of:
+
+Days lived (1 year = 365 days)
+
+Hours lived
+
+Minutes lived
+
+Prints the output in this format:
+You've lived approximately:
+Days: xxx
+Hours: yyy
+Minutes: zzz
+Sample Input:
+Enter your age in years: 18
+ Sample Output:
+You've lived approximately:
+Days: 6570
+Hours: 157680
+Minutes: 9460800
+
+ 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS assinment</title>
+    </head>
+    <body>
+        <script>
+           let age = parseInt(prompt("enter your age"));
+           let days = Math.floor(age * 365.25);
+           let hours = Math.floor(days * 24);
+           let minutes = Math.floor( hours* 60);
+           let second = Math.floor(minutes * 60);
+           console.log("year = " + age + " days = " + days + " hourse = "+ hours + " minuts = " + minutes + " secons = " + second); 
+
+        </script>
+    </body>
+</html>

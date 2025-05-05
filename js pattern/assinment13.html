@@ -1,0 +1,29 @@
+<!-- 
+ 1
+01
+101
+0101
+10101
+ -->
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <title>pattern</title>
+     </head>
+     <body>
+         <script>
+           for(let i = 0;i < 5;i++){
+                 let start;
+                if(i % 2 == 0){
+                     start = 1;
+                }else{
+                     start = 0;
+                }
+                for(let k = 0;k < i;k++){
+                document.write((start+k)%2);
+                }
+                document.write("<br>");
+        }
+         </script>
+     </body>
+ </html>

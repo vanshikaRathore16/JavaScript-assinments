@@ -1,0 +1,25 @@
+<!-- 
+WAP to find greatest of four numbers nested if else as well as else if ladder. 
+-->
+<html>
+    <head>
+        <title>js assinment</title>
+    </head>
+    <body>
+        <script>
+            let a =  parseInt(prompt("enter the first num"));
+            let b =  parseInt(prompt("enter the seconf num"));
+            let c =  parseInt(prompt("enter the thirs num"));
+            let d =  parseInt(prompt("enter the fourth num"));
+            if(a >= b && a >= c && a >= d){
+                document.write(a)
+            }else if(b >= a && b >= c && b >= d){
+               document.write(b);
+            }else if(c >= a && c >= d && c >= d){
+                document.write(c);
+            }else{
+                document.write(d)
+            }
+        </script>
+    </body>
+</html>

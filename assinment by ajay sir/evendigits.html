@@ -1,0 +1,24 @@
+<!-- 
+7. Write a program to read a number from user and check how many digits are even using all loops.
+ 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+       <script>
+        let num = parseInt(prompt("enter the number"));
+        let count = 0;
+        while(num > 0){
+                let div = num % 10;
+                if(div % 2 ==0){
+                    count++
+                }
+                
+                num = parseInt(num / 10);
+            }
+            document.write(count);
+       </script>
+    </body>
+</html>

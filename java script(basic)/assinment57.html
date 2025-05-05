@@ -1,0 +1,31 @@
+<!-- 
+  WAP to print all the prime numbers between two entered numbers
+   -->
+   <!DOCTYPE html>
+   <html>
+       <head>
+           <title>
+           
+           </title>
+       </head>
+       <body>
+           <script>
+              let num1 = parseInt(prompt("enter the fisrt number"));
+              let num2 =parseInt(prompt("enter the second num"));
+              document.write("prime number");
+              for(let i = num1;i <= num2;i++){
+                  let num = i;
+                  let count = 0;
+                for(let i = 2;i < num;i++){
+                    if(num % i == 0){
+                    count++;
+                    break;
+                    }
+                }
+                if(count == 0){
+                    document.write(num + "<br>" );
+                }
+              }
+           </script>
+       </body>
+   </html>

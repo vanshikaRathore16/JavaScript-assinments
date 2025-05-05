@@ -1,0 +1,27 @@
+<!-- 
+Write a program to check whether a number is a palindrome using all loops.
+Input: 121
+Output: Palindrome 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+              let num  = parseInt(prompt("enter the number"));
+            let result = 0;
+            let original = num;
+            while(num > 0){
+                let div = num % 10;
+                 result = result*10+div;
+                num = parseInt(num / 10);
+            }
+            if(result == original){
+                document.write("palindrome");
+            }else{
+                document.write("not palindrome");
+            }
+        </script>
+    </body>
+</html>

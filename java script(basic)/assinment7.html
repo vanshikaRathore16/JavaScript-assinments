@@ -1,0 +1,30 @@
+<!-- WAP to check whether entered number is prime or not -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+        <script>
+          let n = 50;
+          let p= true;
+          if(n <= 1){
+            p = false;
+          }else{
+          for(let i = 2;i < n;i++){
+            if(n % i == 0){
+                 p = false;
+                 break;
+            }
+          }
+        }
+         if(p == false){
+            document.write(" not prime num");
+         }else{
+            document.write("prime num");
+         }
+        </script>
+    </body>
+</html>
