@@ -1,0 +1,40 @@
+<!-- 
+ You're working as a software developer for a high-tech security company that designs digital locks. 
+ Each lock can be opened only if at least 2 digits in the entered number are prime.
+
+Prime digits are: 2, 3, 5, 7
+
+The security system should:
+
+Accept a number input from the user (e.g., lock pin or access code).
+
+Count how many digits in that number are prime digits.
+
+Display messages accordingly:
+Access Code Accepted: 3 prime digits found.
+Access Denied: Only 1 prime digit found.
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let num = parseInt(prompt("enter the password"));
+            let r = 0;
+            let count = 0;
+            while(num > 0){
+                let div = num% 10;
+                if(div == 2 || div == 3 || div == 5 || div == 7){
+                    count++;
+                }
+                num = parseInt(num / 10);
+            }
+            if(count >= 2){
+                document.write("Access Code Accepted")
+            }else{
+                document.write("Access Denied")
+            }
+        </script>
+    </body>
+</html>

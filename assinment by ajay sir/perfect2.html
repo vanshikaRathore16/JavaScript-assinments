@@ -1,0 +1,37 @@
+<!-- 
+5. A fitness app is analyzing a user’s step count over the past week. It wants to identify days with perfect step counts — where the step count is a perfect number.
+
+Write a program that:
+
+Accepts two numbers as input (min and max steps over the week).
+
+Finds and displays all perfect numbers between those two values.
+
+Output each perfect number with a message:
+
+“Day with X steps is a Perfect Day!”
+ 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let num = parseInt(prompt("enter the first numnrt1"));
+            let num2 = parseInt(prompt("enter the first numnrt2"));
+           
+            for(let i = num; i <= num2;i++){
+                let r = 0;
+                for(let k = 1;k < i;k++){
+                    if(i % k == 0){
+                        r += k;
+                    }
+                }
+                if(r == i){
+              document.write("Day with "+ i+ " steps is a Perfect Day!<br>");
+            }
+        }
+        </script>
+    </body>
+</html>

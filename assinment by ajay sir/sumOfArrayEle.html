@@ -1,0 +1,25 @@
+<!-- 
+WAP to read array length and elements from user and display sum of all the elements of the array. 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let num = parseInt(prompt("enter the lenngth"));
+            let arr = [];
+            for(let i = 1;i <= num;i++){
+                let element = parseInt(prompt("enter the arrayelemet "))
+                arr.push(element);
+            }
+            for(let arr1 of arr){
+                document.write(arr1 + "<br>");
+            }
+            let sum = arr.reduce((first,second)=>{
+                return first + second;
+            },0);
+            document.write(sum);
+        </script>
+    </body>
+</html>

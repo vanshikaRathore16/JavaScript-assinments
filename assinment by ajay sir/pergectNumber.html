@@ -1,0 +1,39 @@
+<!-- 
+You are developing a Fitness Tracker App that awards bonus points to users based on their total number of steps taken in a day. To make the rewards more fun and rare, the app gives a special "Perfect Day" badge to users whose step count is a perfect number.
+
+A perfect number is a positive integer that is equal to the sum of its proper divisors (excluding the number itself).
+For example, 28 is a perfect number because its proper divisors (1, 2, 4, 7, 14) sum up to 28.
+
+Your task is to:
+
+Write a program to check if a user's step count qualifies as a perfect number.
+
+Display an appropriate message like:
+
+ "Perfect Day! You’ve earned the badge!" if the number is perfect.
+
+ "Not a perfect day, but keep going!" otherwise.
+
+Input: Total number of steps taken (positive integer) 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let num = parseInt(prompt(("enter the number")));
+            let sum = 0;
+            for(let i = 1;i < num;i++){
+                if(num % i == 0){
+                    sum += i
+                }
+            }
+            if(sum == num){
+                document.write("Perfect Day! You’ve earned the badge!");
+            }else{
+                document.write("Not a perfect day");
+            }
+        </script>
+    </body>
+</html>

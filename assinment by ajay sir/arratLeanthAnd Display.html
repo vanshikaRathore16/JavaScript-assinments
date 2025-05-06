@@ -1,0 +1,23 @@
+<!-- 
+ WAP to read array length and elements from 
+ user and display them using for loop, while loop, for each loop and do-while loop.
+-->
+ <html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let num = parseInt(prompt("enter array size"));
+            let arr = [];
+            for(let i = 1; i <= num;i++){
+                // document.write("enter the array elelmnt" + i);
+                let elements = parseInt(prompt("enter the array elemnts " + i))
+                arr.push(elements);
+            }
+            for(let arr1 of arr){
+               document.write(arr1 + "<br>");
+            }
+        </script>
+    </body>
+ </html>

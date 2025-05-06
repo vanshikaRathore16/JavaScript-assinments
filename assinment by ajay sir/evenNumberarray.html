@@ -1,0 +1,26 @@
+<!-- 
+WAP to read array length and elements from user and display only even numbers from that array.
+ 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let num = parseInt(prompt("enter the lenngth"));
+            let arr = [];
+            for(let i = 1;i <= num;i++){
+                let element = parseInt(prompt("enter the arrayelemet "))
+                arr.push(element);
+            }
+            for(let arr1 of arr){
+                document.write(arr1 + "<br>");
+            }
+            let sum = arr.filter((first)=>{
+                return (first % 2 == 0) ? "even number are" + first : "";
+            },0);
+            document.write(sum);
+        </script>
+    </body>
+</html>
