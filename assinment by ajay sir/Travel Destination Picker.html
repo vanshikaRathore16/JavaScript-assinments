@@ -1,0 +1,34 @@
+<!-- 
+Travel Destination Picker
+Scenario: A travel agency wants to filter popular destinations.
+
+Assignment:
+
+Given: ['Paris', 'London', 'Delhi', 'New York', 'Tokyo', 'Delhi']
+
+Remove duplicates.
+
+Sort destinations alphabetically.
+
+Check if a given destination is available in the list.
+ 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let arr = ['Paris', 'London', 'Delhi', 'New York', 'Tokyo', 'Delhi'];
+            let unique = [...new Set(arr)];
+            let sort = arr.sort();
+            let destination = "London";
+            let des = arr.filter(element =>{
+                return element == destination;
+            });
+            document.write(unique + "<br>");
+             document.write("<br>" + sort);
+             document.write("<br>" + des);
+        </script>
+    </body>
+</html>

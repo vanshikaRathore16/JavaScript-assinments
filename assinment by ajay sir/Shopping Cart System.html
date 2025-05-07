@@ -1,0 +1,36 @@
+<!-- 
+ . Shopping Cart System
+Scenario: A shopping website stores item prices in an array.
+
+Assignment:
+
+Given an array like [299, 499, 150, 250, 100]
+
+Calculate:
+
+Total bill
+
+Total after applying a 10% discount
+
+List of items costing more than ₹200
+
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let arr = [299, 499, 150, 250, 100];
+            let sum = arr.reduce((f,s)=>{
+                 return f+s
+                },0);
+            let discount = (sum * 10)/100;
+            let totalafter = number(sum-discount);
+            let costing = arr.filter((e => e >= 200));
+            document.write("total bill = " + sum);
+            document.write("<br>discount = "+ totalafter);
+            document.write("<br>costing more then 200 = " + costing);
+        </script>
+    </body>
+</html>

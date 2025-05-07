@@ -1,0 +1,35 @@
+<!-- 
+.Write a Java program to reverse a given array. Define a method reverseArray 
+that takes an integer array as an argument and returns a new array with the elements in reverse order.
+ 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+           let number = parseInt(prompt("enter the araay length"));
+            let arr = [];
+            for(let i = 1;i <= number;i++){
+                let element = parseInt(prompt("enter the array element"));
+                arr.push(element)
+            }
+            for(let element of arr){
+                document.write(element);
+            }
+            function reverceArray(obj){
+            let clone = [...obj];
+            clone.reverse();
+            return clone;
+
+        }
+       
+        document.write("<br>reverce array <br>");
+        let r = reverceArray(arr);
+            for(let element of r){
+                document.write(element );
+            }
+        </script>
+    </body>
+</html>

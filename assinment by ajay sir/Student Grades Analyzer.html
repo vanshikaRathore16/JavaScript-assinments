@@ -1,0 +1,39 @@
+<!-- 
+1. Student Grades Analyzer
+Scenario: You are building a system to help teachers analyze student performance.
+
+Assignment:
+
+Take an array of student marks: [85, 90, 78, 92, 88, 76]
+
+Find:
+
+The highest and lowest marks.
+
+The average mark.
+
+List of students who scored above the average.
+ 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let arr = [85,90,78,92,88,76];
+            let max = Math.max(...arr);
+            let min = Math.min(...arr);
+            let sum = arr.reduce((first,second)=>{
+                return first+second;
+            })
+            let avr = parseInt(sum/arr.length);
+            document.write("max = "+max);
+            document.write("min = "+min);
+            document.write("avr = " + avr);
+            let studend = arr.Filter(Element => Element >= avr);
+            document.write(studend.join(","));
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!-- 
+Write a Java program to concatenate two given arrays. Define a method concatenateArrays that takes two integer arrays 
+as arguments and returns a new array containing all elements of the first array followed by all elements of the second
+ array.
+Code constraints :
+The input arrays can be of any length, including empty.
+Sample test cases :
+Input 1 :
+int[] array1 = {1, 2, 3};
+int[] array2 = {4, 5, 6};
+Output 1 :
+1 2 3 4 5 6 
+-->
+<html>
+   <head>
+
+   </head>
+   <body>
+    <script>
+        let arr = [];
+        let arr2 = [];
+        while(true){
+             let element = parseInt(prompt("Enter a value for array 1 (type '0' to finish):"));
+             if(element === 0){
+                break;
+             }else
+             arr.push(element);
+        }
+        while(true){
+             let element = parseInt(prompt("Enter a value for array 2 (type '0' to finish):"));
+             if(element === 0){
+                break;
+             }else
+             arr2.push(element);
+        }
+        document.write("<br>array 1<br>")
+        for(let element1 of arr){
+            document.write(element1 + " ");
+        }
+        document.write("<br>array 2<br>")
+        for(let element1 of arr2){
+            document.write(element1 + " ");
+        }
+        function con(arr1,arr2){
+        let array = [...arr1,...arr2];
+        return array;
+        }
+        let arr3 = con(arr,arr2);
+        document.write("<br>"+arr3 +"<br>");
+    </script>
+   </body>
+</html>

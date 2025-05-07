@@ -1,0 +1,36 @@
+<!-- 
+Write a Java program to find the maximum value in a given array. Define a method findMax that takes an integer array as an argument and returns the maximum value.
+Code constraints :
+The input array should have at least one element.
+Sample test cases :
+Input 1 :
+5
+10
+20
+30
+40
+50
+Output 1 :
+The maximum value in n the array is: 50
+ 
+-->
+<html>
+    <head></head>
+    <body>
+        <script>
+            let number = parseInt(prompt("enter the araay length"));
+            let arr = [];
+            for(let i = 1;i <= number;i++){
+                let element = parseInt(prompt("enter the array element"));
+                arr.push(element)
+            }
+            for(let element of arr){
+                document.write(element);
+            }
+            function findmax(arr){
+                return Math.max(...arr)
+            }
+            document.write("<br> max value in array = "  + findmax(arr));
+        </script>
+    </body>
+</html>
