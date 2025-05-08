@@ -1,0 +1,30 @@
+<!-- 
+ Bill Splitter for a Group
+Scenario: A group of friends splits the cost of items.
+
+let amounts = [120, 340, 150, 90, 200];
+Tasks:
+Find total amount spent.
+Split the bill equally and print each person's share.
+Find who paid the highest and who paid the least.
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let amount = [120, 340, 150, 90, 200];
+            let sum = amount.reduce((f,s) =>{
+                return f+s;
+            },0);
+            let split = sum/amount.length;
+            let max = Math.max(...amount);
+            let min = Math.min(...amount);
+            document.write("total amount spent. = " +sum + "<br>");
+            document.write("<br>each person's share" + split +"<br>");
+            document.write("<br> paid the highest = " + max);
+            document.write("<br>paid the least. = " + min);
+      </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- 
+Scenario: A company wants to clean its employee name list.
+
+Data:
+let employees = ['Raj', '', 'Anu', null, ' ', 'Ravi', undefined];
+Tasks:
+
+Remove all falsy or empty-looking values ('', null, undefined, ' ').
+
+Return a cleaned list.
+
+Count how many valid entries were originally there. 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let emp = ['Raj', '', 'Anu', null, ' ', 'Ravi', undefined];
+            let clean = emp.filter(element =>{
+                return element && element.trim();
+            });
+            for(let element of clean){
+                document.write(element+" ");
+            }
+            document.write("<br>length = "+clean.length);
+        </script>
+    </body>
+</html>

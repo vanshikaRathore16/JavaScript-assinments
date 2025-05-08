@@ -1,0 +1,36 @@
+<!-- 
+ 6. Restaurant Menu
+Scenario: A restaurant manages its menu items using an array.
+
+Assignment:
+
+Menu: ['Burger', 'Pizza', 'Fries', 'Pasta', 'Salad']
+
+Add a new item 'Soda' to the end.
+
+Remove 'Fries' from the menu.
+
+Sort and display the updated menu.
+
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let menu = ['Burger', 'Pizza', 'Fries', 'Pasta', 'Salad'];
+            document.write("before<br>");
+             for(let element of menu){
+                document.write(element + " ");
+            }
+            menu.push("soda");
+             menu.splice(2,1);
+            menu.sort();
+            document.write("<br>after<br>");
+            for(let element of menu){
+                document.write(element + " ");
+            }
+        </script>
+    </body>
+</html>
