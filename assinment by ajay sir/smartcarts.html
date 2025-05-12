@@ -1,0 +1,130 @@
+<!-- 
+ You are tasked with developing SmartCart, a smart grocery shopping assistant using JavaScript functions.
+ This assistant will help users manage their cart, calculate total prices, check for healthy items, and suggest
+better alternatives.
+
+You must implement the required features using different types of functions and related concepts in JavaScript.
+
+1. Add Items to Cart
+Write a function declaration named addToCart(cart, item) that adds a new item  to the shopping cart array 
+and returns the updated cart.
+
+2. Remove Items from Cart
+Use a function expression named removeFromCart(cart, itemName) to remove an item from the cart based on its
+ name and return the updated cart.
+
+3. Check Healthy Items
+Define an arrow function isHealthy(itemName) that checks whether the item is present in a predefined list of
+ healthy items.
+
+4. Calculate Total with Tax
+Create a function calculateTotal(cart, taxRate = 0.05) that calculates the total cost of items in the cart 
+including a default 5% tax.
+
+5. Apply Discount
+Write a function applyDiscount(total, discount = 0.1) that applies a discount to the total cost. The default
+ discount is 10%.
+
+6. Add Multiple Items
+Implement a function addBulkItems(cart, ...items) that uses rest parameters to add multiple items to the cart
+ in a single call.
+
+-->
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+        let cart = [];
+        let healthyItem = ['apple', 'banana', 'carrot', 'spinach', 'almonds']
+        function addToAdd(cart,item){
+           cart.push(item);
+           return cart;
+        }
+        function removeFromCart(cart,itemname){
+            let new_cart = cart.filter(item=> item.name != itemname);
+            return new_cart;
+            };
+    
+        let isHealthy = itemname => healthyItem.includes(itemname.toLowerCase()); 
+        
+        
+
+        function calculateTotal(cart,taxrate = 0.05){
+            let sum1 = cart.reduce((sum,item)=>
+        sum+item.price,0);
+        let finalprice = sum1 + (sum1*taxrate);
+        return finalprice
+        }
+        function applyDiscount(cart,discount = 0.1){
+           let sum1 = cart.reduce((sum,item)=>
+        sum+item.price,0); 
+        return sum1 - (sum1 * discount);
+        }
+        function addBulkItem(cart,...item){
+            cart.push(...item);
+            return cart;
+        }
+        while(true){
+                     let number = parseInt(prompt(`enter the choice"
+                       " 1. Add item to cart"
+2. Remove item from cart
+3. Check if an item is healthy
+4. Calculate total with tax
+5. Apply discount
+6. Add multiple items
+7. Exit
+Enter your choice (1-7):`
+                     ))
+                      if(number === 7){
+                        break;
+                      }else
+                       switch(number){
+                        case 1:
+                        
+                           let name = prompt("enter the name");
+                           let price = parseFloat(prompt("enter the price"));
+                            addToAdd(cart,{name,price});
+                            console.log( cart);
+                            // document.write(cart);
+                            break;
+                        case 2:
+                         let item = prompt("enter the item you want to remove");
+                        let rcart=  removeFromCart(cart,item);
+                         console.log("after remove = ",rcart)
+                        //  document.write(cart);
+                         break;
+                         case 3:
+                        let itemname = prompt("enter item name");
+                         if(isHealthy(itemname)){
+                            console.log("h")
+                            // document.write("h");
+                         }else{
+                            console.log("n")
+                            // document.write("n");
+                         }
+                         break;
+                         case 4:
+                            let texrate = calculateTotal(cart);
+                             console.log(texrate);
+                            //  document.write(texrate);
+                         break;
+                         case 5:
+                            let discount = applyDiscount(cart);
+                            console.log(discount);
+                            // document.write(discount);
+                        break;
+                        case 6:
+                            let add = prompt("enter the items");
+                            addBulkItem(cart,add);
+                            break;
+                        case 7:
+                            break;
+
+                }
+
+        }
+        </script>
+    </body>
+</html>
