@@ -1,0 +1,80 @@
+<!-- 
+You're developing TuneTrack, a smart music playlist manager that helps users manage their favorite tracks. 
+Users can add or remove songs, check if songs are trending, calculate the total duration of songs, apply
+ skip-time, and more. Implement each of the following features using appropriate JavaScript function types
+  and concepts.
+
+1. Add Song to Playlist
+Write a function declaration named addToPlaylist(playlist, songName) that adds a song name (string) to 
+the playlist array and returns the updated playlist.
+
+2. Remove Song from Playlist
+Use a function expression named removeFromPlaylist(playlist, songName) to remove a song by its name from 
+the playlist and return the updated array.
+
+3. Check Trending Songs
+Define an arrow function isTrending(songName) that checks whether a given song is in a predefined list 
+of trending songs.
+
+4. Calculate Total Duration
+Write a function calculateDuration(durations, speed = 1) that takes an array of song durations (in minutes)
+ and returns the total time to listen, adjusted for playback speed (default is normal speed: 1x).
+
+5. Add Multiple Songs
+Create a function addBulkSongs(playlist, ...songs) using rest parameters to add multiple songs to the
+ playlist at once and return the updated playlist.
+ 
+-->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let playlist = [];
+            // add funcation
+            playlist.push({songname : "lover", duration : "3min"});
+            function addToPlaylist(playlist,songname,duration){
+                playlist.push({songname,duration});
+                return playlist
+            }
+            addToPlaylist(playlist,"black space","2min");
+            console.log( "after adding a new song" , playlist);
+            //  remove funcation
+             function removeFromPlaylist(playlist,songname){
+               let song = playlist.filter(song => song.songname!== songname)
+                return song;
+     }
+           playlist =  removeFromPlaylist(playlist,"lover");
+            console.log("after removing a song" , playlist);
+            //  is treading
+            let treading = ["lover","london-boy","forget"];
+            function isTrending(treading,songname){
+                let isTrending = treading.includes(songname);
+                return isTrending
+            }
+            if(isTrending(treading,"tere bin")){
+                console.log("is treading");
+            }else{
+                console.log("not in treading");
+            }
+            // calculate total duration
+            function calculateDuration(playlist,speed = 2){
+                let sum = playlist.reduce((sum,song)=>{
+                    let minuts = parseFloat(song.duration);
+                    return sum + minuts;
+                },0);
+                let adjusted = sum / speed;
+                return adjusted;
+            }
+            let calculate = calculateDuration(playlist);
+            console.log("total duration = " + calculate);
+            // Add Multiple Songs
+            function addBulkSongs(playlist,...songs){
+              songs.forEach(song => {
+                playlist.push(song);
+              });
+            }
+        </script>
+    </body>
+</html>

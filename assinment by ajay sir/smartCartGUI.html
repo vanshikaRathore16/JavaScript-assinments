@@ -1,0 +1,97 @@
+<!-- 
+ You are tasked with developing SmartCart, a smart grocery shopping assistant using JavaScript functions.
+ This assistant will help users manage their cart, calculate total prices, check for healthy items, and suggest better alternatives.
+
+You must implement the required features using different types of functions and related concepts in JavaScript.
+
+1. Add Items to Cart
+Write a function declaration named addToCart(cart, item) that adds a new item  to the shopping cart array and returns the updated cart.
+
+2. Remove Items from Cart
+Use a function expression named removeFromCart(cart, itemName) to remove an item from the cart based on its name and return the updated cart.
+
+3. Check Healthy Items
+Define an arrow function isHealthy(itemName) that checks whether the item is present in a predefined list of healthy items.
+
+4. Calculate Total with Tax
+Create a function calculateTotal(cart, taxRate = 0.05) that calculates the total cost of items in the cart including a default 5% tax.
+
+5. Apply Discount
+Write a function applyDiscount(total, discount = 0.1) that applies a discount to the total cost. The default discount is 10%.
+
+6. Add Multiple Items
+Implement a function addBulkItems(cart, ...items) that uses rest parameters to add multiple items to the cart in a single call.
+
+-->
+<html>
+    <head>
+        <title>smart cart GUI</title>
+        <style>
+            body{
+                background: #222;
+            }
+            .main{
+              background:  linear-gradient(135deg,#00feba,#5b548a);
+              width: 50%;
+              min-width: 700;
+              margin: 20%;
+              padding: 20px;
+            }
+            .container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 30px;
+  }
+  input{
+     border-radius: 20px;
+     font-size: 20px;
+  }
+
+  button{
+      border-radius: 20px;
+      font-size: 15px;
+      background: darkblue;
+      color: white;
+      border: none;
+      margin: 10px;
+      padding: 10px;
+      cursor: pointer;
+  }
+        </style>
+    </head>
+    <body>
+     <div class = "main">
+        <div class = "container">
+            <div class = "input">
+                <input type = "text" id = "itemname" placeholder="enter the item name">
+                <input type = "text" id = "pricename" placeholder="enter the price">
+             </div>
+             </div>
+             <div class = "button">
+                <button onclick="add()">add to cart</button>
+                <button>remove from cart</button>
+                <button>isHealthy</button>
+                <button>calculate with tax</button>
+                <button>apply discount</button>
+                <button>add multiple item</button>
+             </div>
+             <div id = "display"></div>
+        </div>
+     </div>
+    </body>
+    <script>
+     
+    function add(){
+    let itemname = document.getElementById("itemname").value;
+    let pricename = document.getElementById("pricename").value;
+    let display = document.getElementById("display");
+    let cart = [];
+    if(itemname.length == 0 || pricename.length == 0){
+       display.textContent = "enter the value";
+    }else
+       display.textContent ="";
+     }
+
+    </script>
+</html>
