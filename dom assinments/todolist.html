@@ -1,0 +1,49 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title></title>
+        <style>
+            body{
+                padding: 20px;
+            }
+          input, button{
+              padding: 8px;
+              margin: 5px;
+          }
+          ul{
+            list-style-type: none;padding-left: 0%;
+          }
+          /* li{
+
+          } */
+        </style>
+    </head>
+    <body>
+        <h1>to do list</h1>
+        <input type = "text" id = "input" placeholder="enter your task here">
+        <button class = "button" onclick="addtadk()">add</button>
+        <ul id = "tasklist"></ul>
+        <script>
+
+          function addtadk(){
+          const input = document.getElementById("input").value;
+          const ui = document.getElementById("tasklist");
+             if(input == ""){
+               alert("plaese enter the vtask");
+               return
+             }
+          const li = document.createElement("li");
+          li.innerText = input;
+          const deletebtn  = document.createElement("button");
+          deletebtn.innerText = "delete";
+          deletebtn.style.marginLeft = "10px";
+          deletebtn.onclick  = ()=>{
+            li.remove();
+          }
+          li.appendChild(deletebtn);
+          ui.appendChild(li);
+          input.value = "";
+          }
+        </script>
+    </body>
+</html>

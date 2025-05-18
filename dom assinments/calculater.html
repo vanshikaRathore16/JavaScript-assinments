@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+          body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: black;
+          }  
+          .con1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 700px;
+            min-width: 400px;
+            background-color: antiquewhite;
+           padding: 20px;
+         input{
+            margin: 1%;
+         }
+          button{
+            padding: 2px;
+            margin-top: 5%;
+          }
+ }
+        </style>
+    </head>
+    <body>
+        <div class = "con1">
+          <input type = "text" id = "input1" placeholder="enter the number one">
+          <input type = "text" id = "input2" placeholder="enter the number two">
+          <div id = "container">
+            <button onclick="add()">add</button>
+            <button>minus</button>
+            <button>multiply</button>
+            <button>div</button>
+          </div>
+          <p id = "display"></p>
+          </div>
+        <script>
+         function add(){
+            const first1 = document.getElementById("input1");
+            const seconds1 = document.getElementById("input2");
+            const first = parseFloat(first1.value);
+            const seconds = parseFloat(seconds1.value);
+            const display = document.getElementById("display");
+            if(first == "" || seconds == ""){
+               display.innerText = "enter the value";
+               return;
+            } 
+            let result = first + seconds;
+            display.innerText = result;
+            first1.value = "";
+            seconds1.value = "";
+         }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!--  -->
+  <html>
+    <head>
+        <title></title>
+        <style>
+            body{
+                background-color: rgba(0, 0,0,0.7);
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: white;
+                height: 100vb;
+            }
+            #con{
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+            #display{
+                text-align: center;
+                margin: 20px;
+                border: 2px;
+                border-radius: 5px;
+                background-color: black;
+                padding: 20px;
+            }
+            button{
+                margin-top: 3%;
+                padding: 5px;
+                font-weight: bold;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>strap watch</h1>
+        <div id = "con">
+            <div id = "display">00:00:00</div>
+            <div>
+                <button onclick="start()">start</button>
+                <button onclick="stop()">stop</button>
+                <button onclick="reset()">reset</button>
+            </div>
+        </div>
+        <script>
+           let secends = 0;
+           let minuts = 0;
+           let hourse = 0;
+           let running ;
+           function display(){
+            let sec = secends < 10 ? 0 + secends : secends;
+            let min= minuts < 10 ? 0 + minuts : minuts;
+            let hou = hourse < 10 ? 0 + hourse : hourse;
+            let display = document.getElementById("display");
+            display.innerText = hou +" : " + min + " : "+ sec;
+           }
+           function start(){
+            if(!running){
+                running = setInterval(()=>{
+                    secends++;
+                    if(secends == 60){
+                        secends = 0;
+                        minuts++;
+                    }
+                    if(minuts == 60){
+                        minuts = 0;
+                        hourse++;
+                    }
+                  display();
+                },1000)
+              
+            }
+        }
+            function stop(){
+                clearInterval(running);
+                running = null;
+            }
+            function reset(){
+                stop();
+                secends = 0;
+                minuts = 0;
+                hourse = 0;
+                display();
+            }
+           
+        </script>
+    </body>
+  </html>

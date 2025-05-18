@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            body{
+                /* padding: 20px; */
+                text-align: center;
+            }
+            .container{
+                width: 100%;
+                height: 100vb;
+           }
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+            .control{
+                margin-top: 15px;
+            }
+            button{
+                padding: 8px 16px;
+                margin: 0px 10px;
+                font-size: 16px;
+                background-color: #333;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            button:hover{
+                background-color: #555;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>image salide</h2>
+        <div id = "container">
+            <img id = "image" src = "" alt = "salide image">
+        </div>
+        <div id = "control">
+             <button  onclick="lastimage()">previous</button>
+             <button  onclick="nextimage()">next</button>
+        </div>
+        <script>
+            const img = [
+                "download (1).jpg",
+                "download (2).jpg",
+                "download (3).jpg",
+                "download.jpg"
+            ]
+            let currentindex = 0;
+            let img1 = document.getElementById("image");
+            function showimage(index){
+                img1.src = img[index];
+            }
+            function nextimage(){
+                currentindex = (currentindex + 1) % img.length;
+                showimage(currentindex);
+            }
+             function lastimage(){
+                currentindex = (currentindex - 1 + img.length) % img.length;
+                showimage(currentindex);
+            }
+            showimage(currentindex);
+        </script>
+    </body>
+</html>
